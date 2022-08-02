@@ -168,7 +168,7 @@
         // Dolly!";
         //     let x = "John";
 
-        //     // y is an object
+        //     // y is an object    
         //     let y = new String("John");
 
         //     document.getElementById("demo").innerHTML =
@@ -185,11 +185,69 @@
         //     document.getElementById("demo").innerHTML =
         //         text.replace(/MICROSOFT/i, "W3Schools");
         // }
-        function myFunction() {
-            let text = document.getElementById("demo").innerHTML;
-            document.getElementById("demo").innerHTML =
-                text.replace(/Microsoft/g, "W3Schools");
+        // function myFunction() {
+        //     let text = document.getElementById("demo").innerHTML;s
+        //     document.getElementById("demo").innerHTML =
+        //         text.replace(/Microsoft/g, "W3Schools");
+        // }
+
+        // function myFunction() {
+        //     let text = document.getElementById("demo").innerHTML;
+        //     document.getElementById("demo").innerHTML =
+        //         text.toLowerCase();
+        //     // text.toUpperCase();
+
+        // }
+        // let text1 = "Hello";
+        // let text2 = "World!";
+        // let text3 = text1.concat(" ", text2);
+        // document.getElementById("demo").innerHTML = text3;
+        // let text1 = "     Hello World!     ";
+        // let text2 = text1.trim();
+        // document.getElementById("demo").innerHTML = text2.length;
+        // var text = "HELLO WORLD";
+        // document.getElementById("demo").innerHTML = text.charAt(0);
+        // document.getElementById("demo").innerHTML = text[0];
+        // let text = "Hello";
+        // const myArr = text.split("");
+
+        // text = "";
+        // for (let i = 0; i < myArr.length; i++) {
+        //     text += myArr[i] + "<br>"
+        // }
+        // document.getElementById("demo").innerHTML = text;
+        //let str = "Please locate where 'locate' occurs!";
+        //document.getElementById("demo").innerHTML = str.indexOf("locate",15);
+        //document.getElementById("demo").innerHTML = str.lastIndexOf("locate", 15);
+        // let str = "Please locate where 'locate' occurs!";
+        // document.getElementById("demo").innerHTML = str.search("locate");
+        // let text = "The rain in SPAIN stays mainly in the plain";
+        // document.getElementById("demo").innerHTML = text.match(/ain/gi);
+        // let text = "Hello world, welcome to the universe.";
+        // document.getElementById("demo").innerHTML = text.includes("world", 12);
+        // let text = "Hello world, welcome to the universe.";
+        // document.getElementById("demo").innerHTML = text.startsWith("Hello", 5);
+        // let text = "Hello world, welcome to the universe.";
+        // document.getElementById("demo").innerHTML = text.endsWith("world", 11);
+        // let text = `Hello world!`;
+        // document.getElementById("demo").innerHTML = text;
+        // let text = `He's often called "Johnny"`;
+        // document.getElementById("demo").innerHTML = text;
+        // let firstName = "John";
+        // let lastName = "Doe";
+        // let text = `Welcome ${firstName}, ${lastName}!`;
+        // document.getElementById("demo").innerHTML = text;
+        let header = "Templates Literals";
+        let tags = ["template literals", "javascript", "es6"];
+
+        let html = `<h2>${header}</h2><ul>`;
+
+        for (const x of tags) {
+            html += `<li>${x}</li>`;
         }
+
+        html += `</ul>`;
+        document.getElementById("demo").innerHTML = html;
     </script>
 
 </body>
