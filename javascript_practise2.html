@@ -13,8 +13,8 @@
 
     <p id="demo">Please visit Microsof and Microsoft!</p>
     <p id="demo1"></p>
-
     <p id="demo2"></p>
+    <button onclick="myFunction()">Add Item</button>
 
     <script>
         // JS Numbers 
@@ -133,6 +133,72 @@
 
         //parseFloat()
         // document.getElementById("demo").innerHTML = parseInt("10.66") + parseInt("10 years") + parseInt("years 10");
+
+        //Arrays
+        // const cars = ["Vento", "Audi", "BMW"];
+        // cars[0] = "Opel";
+        //document.getElementById("demo").innerHTML = cars;
+        // document.getElementById("demo").innerHTML = cars.length;
+        // const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        // let fLen = fruits.length;
+
+        // let text = "<ul>";
+        // for (let i = 0; i < fLen; i++) {
+        //     text += "<li>" + fruits[i] + "</li>";
+        // }
+        // text += "</ul>";
+
+        // document.getElementById("demo").innerHTML = text;
+        // document.getElementById("demo").innerHTML = fruits;
+
+        // function myFunction() {
+        //     fruits.push("Lemon");
+        //     document.getElementById("demo").innerHTML = fruits;
+        // }
+        // const points = new Array(40);
+        // document.getElementById("demo").innerHTML = points;
+        // document.getElementById("demo").innerHTML = fruits instanceof Array;
+        // Array.isArray(fruits);
+
+
+        //Array Methods
+
+        //Converting Arrays to Strings
+        // const fruits = ["Banana", "Orange", "Apple", "Mango"];/
+        // document.getElementById("demo").innerHTML = fruits.toString();
+        // document.getElementById("demo").innerHTML = fruits.join("|");
+
+        //Popping and Pushing
+        // fruits.pop();
+        // fruits.push("Kiwi");
+        // document.getElementById("demo2").innerHTML = fruits;
+        // document.getElementById("demo1").innerHTML = fruits.push("Kiwi");
+        // document.getElementById("demo2").innerHTML = fruits;
+        // document.getElementById("demo1").innerHTML = fruits.pop();
+        // fruits.shift();
+        // document.getElementById("demo2").innerHTML = fruits;
+        // delete fruits[0];
+
+        //Concatenating Arrays
+        // const myGirls = ["Cecilie", "Lone"];
+        // const myBoys = ["Emil", "Tobias", "Linus"];
+        // const array3 = ["Robin", "Morgan"];
+        // const myChildren = myGirls.concat(myBoys, array3);
+        // document.getElementById("demo").innerHTML = myChildren;
+
+        //Splicing and Slicing
+        // const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        // document.getElementById("demo1").innerHTML = "Original Array:<br> " + fruits;
+        // let removed = fruits.splice(2, 2, "Lemon", "Kiwi");
+        // fruits.splice(0, 1);
+        // document.getElementById("demo2").innerHTML = "New Array:<br>" + fruits;
+        // document.getElementById("demo3").innerHTML = "Removed Items:<br> " + removed;
+
+        // const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+        // // const citrus = fruits.slice(1);
+        // const citrus = fruits.slice(1, 4);
+        // document.getElementById("demo").innerHTML = fruits + "<br><br>" + citrus;
+
     </script>
 </body>
 
