@@ -381,6 +381,78 @@
 
         // document.getElementById("demo").innerHTML = text;
 
+        //JS Sets
+        // const letters = new Set(["a", "b", "c"]);
+        // const iterator = letters.entries();
+        // let text = "";
+        // // for(const x of letters.values()){
+        // for (const x of iterator) {
+        //     text += x + "<br>";
+        // }
+
+        // //document.getElementById("demo").innerHTML = text;
+        // document.getElementById("demo").innerHTML = letters instanceof Set;
+
+        //JS Maps
+        // const fruits = new Map([
+        //     ["apples", 500],
+        //     ["bananas", 300],
+        //     ["oranges", 200]
+        // ]);
+
+        // let text = "";
+        // // for (const x of fruits.entries()) {
+        // //     text += x + "<br>";
+        // // }
+        // // for (const x of fruits.keys()) {
+        // //     text += x + "<br>";
+        // // }
+        // let total = 0;
+        // for (const x of fruits.values()) {
+        //     total += x;
+        // }
+        // document.getElementById("demo").innerHTML = total;
+
+        // const apples = { name: 'Apples' };
+        // const bananas = { name: 'Bananas' };
+        // const oranges = { name: 'Oranges' };
+
+        // const fruits = new Map();
+
+        // // Add the Objects to the Map
+        // fruits.set(apples, 500);
+        // fruits.set(bananas, 300);
+        // fruits.set(oranges, 200);
+
+        // document.getElementById("demo").innerHTML = fruits.get(apples);
+
+        //References
+        //Changing a Property Value
+        // const person = {
+        //     firstName: "John",
+        //     lastName: "Doe",
+        //     language: "EN"
+        // };
+        // Object.defineProperty(person, "language", { value: "IN" })
+        // document.getElementById("demo").innerHTML = person.language;
+
+        //Listing all properties
+        // Object.defineProperty(person, "language", { enumerable: false });
+        // document.getElementById("demo").innerHTML = Object.getOwnPropertyNames(person);
+
+        //Listing enumerable Properties
+        // document.getElementById("demo").innerHTML = Object.keys(person);
+
+        //Adding a new property
+        // Object.defineProperty(person, "year", { value: "2008" });
+        // document.getElementById("demo").innerHTML = person.year;
+
+        //Adding Getters and Setters
+        // Object.defineProperty(person, "fullName", {
+        //     get: function () { return this.firstName + " " + this.lastName; }
+        // });
+        // document.getElementById("demo").innerHTML = person.fullName;
+
     </script>
 </body>
 
