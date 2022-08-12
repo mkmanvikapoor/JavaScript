@@ -10,11 +10,11 @@
 
 <body>
     <!-- <input id="demo" type="text"> -->
-    <p id="demo">Please visit microsoft</p>
-    <p id="p01">The best things in life are free!</p>
-    <button type="button" onclick="myFunction()">Try it</button>
+    <p id="demo"></p>
+    <!-- <p id="p01">The best things in life are free!</p>
+    <button type="button" onclick="myFunction()">Try it</button> -->
 
-    <script type="module">
+    <script>
         // "use strict";
         //Bitwise Operators
         // document.getElementById("demo").innerHTML = 5 & 1;
@@ -248,6 +248,138 @@
         // const arr = ["John", "Peter", "Sally", "Jane"];
         // document.getElementById("demo").innerHTML = JSON.stringify(arr);
 
+        //JS Accessors
+        // const person = {
+        //     firstName: "John",
+        //     lastName: "Wick",
+        //     // language: "en",
+        //     language: "",
+        //     set lang(lang) {
+        //         this.language = lang;
+        //     }
+        //     // get lang() {
+        //     //     return this.language;
+        //     // }
+
+        // };
+        // person.lang = "en";
+        // document.getElementById("demo").innerHTML = person.language;
+
+        //Object.defineProperty()
+        // Define an object
+        // const obj = { counter: 0 };
+
+        // // Define Setters and Getters
+
+        // Object.defineProperty(obj, "reset", {
+        //     get: function () { this.counter = 0; }
+        // });
+        // Object.defineProperty(obj, "increment", {
+        //     get: function () {
+        //         this.counter++;
+        //     }
+        // });
+        // Object.defineProperty(obj, "decrement", {
+        //     get: function () {
+        //         this.counter--;
+        //     }
+        // });
+        // Object.defineProperty(obj, "add", {
+        //     set: function (value) {
+        //         this.counter += value;
+        //     }
+        // });
+
+        // Object.defineProperty(obj, "subtract", {
+        //     set: function (value) {
+        //         this.counter -= value;
+        //     }
+        // });
+
+        // // Play with counter:
+        // obj.reset;
+        // obj.add = 5;
+        // obj.subtract = 1;
+        // obj.increment;
+        // obj.decrement;
+        // document.getElementById("demo").innerHTML = obj.counter;
+
+        //Object Constructors
+        // function Person(first, last, age, eye) {
+        //     this.firstName = first;
+        //     this.lastName = last;
+        //     this.age = age;
+        //     this.eyeColor = eye;
+        // }
+        // const myFather = new Person("John", "Wick", 50, "blue");
+        // myFather.nationality = "English";
+        // myMother.name = function () {
+        //     return this.firstName + " " + this.lastName;
+        // };
+
+        // const myMother = new Person("Sally", "Rally", 48, "green");
+        // document.getElementById("demo").innerHTML = myFather.eyeColor + " " + myMother.name() + " " + myFather.nationality;
+
+        //Object Prototypes
+        // function Person(first, last, age, eye) {
+        //     this.firstName = first;
+        //     this.lastName = last;
+        //     this.age = age;
+        //     this.eyeColor = eye;
+        // }
+        // Person.prototype.nationality = "English";
+        // Person.prototype.name = function () {
+        //     return this.firstName + " " + this.lastName;
+        // }
+        // const myFather = new Person("John", "Wick", 50, "blue");
+        // document.getElementById("demo").innerHTML = myFather.nationality + " " + myFather.name();
+
+        //Object Iterables
+        //Home Made iterables
+        // function myNumbers() {
+        //     let n = 0;
+        //     return {
+        //         next: function () {
+        //             n += 10;
+        //             return {
+        //                 value: n, done: false
+        //             };
+        //         }
+        //     };
+        // }
+
+        // const n = myNumbers();
+        // // n.next();
+        // document.getElementById("demo").innerHTML = n.next().value;
+
+        //JS Iterables using Symbol.iterator
+        // myNumbers = {};
+        // myNumbers[Symbol.iterator] = function () {
+        //     let n = 0;
+        //     done = false;
+        //     return {
+        //         next() {
+        //             n += 10;
+        //             if (n == 100) { done = true }
+        //             return { value: n, done: done };
+        //         }
+        //     };
+        // }
+
+        // let text = ""
+        // for (const num of myNumbers) {
+        //     text += num + "<br>"
+        // }
+        // let iterator = myNumbers[Symbol.iterator]();
+
+        // let text = ""
+        // while (true) {
+        //     const result = iterator.next();
+        //     if (result.done) break;
+        //     text += result.value + "<br>";
+        // }
+
+        // document.getElementById("demo").innerHTML = text;
 
     </script>
 </body>
