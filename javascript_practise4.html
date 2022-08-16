@@ -276,6 +276,152 @@
         // let myCar = new Car("Ford");
         // document.getElementById("demo").innerHTML = Car.hello(myCar);
 
+        //JS Async
+
+        //JS Callbacks
+        // function myDisplayer(some) {
+        //     document.getElementById("demo").innerHTML = some;
+        // }
+        // function myFirst() {
+        //     myDisplayer("Hello");
+        // }
+        // function mySecond() {
+        //     myDisplayer("Goodbye");
+        // }
+        // myFirst();
+        // mySecond();
+
+        // function myDisplayer(some) {
+        //     document.getElementById("demo").innerHTML = some;
+        // }
+        // function myCalculator(num1, num2) {
+        //     let sum = num1 + num2;
+        //     return sum;
+        // }
+        // let result = myCalculator(5, 5);
+        // myDisplayer(result);
+
+        // function myDisplayer(something) {
+        //     document.getElementById("demo").innerHTML = something;
+        // }
+
+        // function myCalculator(num1, num2, myCallback) {
+        //     let sum = num1 + num2;
+        //     myCallback(sum);
+        // }
+
+        // myCalculator(5, 5, myDisplayer);
+
+        // setTimeout(myFunction, 3000);
+
+        // function myFunction() {
+        //     document.getElementById("demo").innerHTML = "Hello Asynchronous!!";
+        // }
+
+        // setInterval(myFunction, 1000);
+
+        // function myFunction() {
+        //     let d = new Date();
+        //     document.getElementById("demo").innerHTML =
+        //         d.getHours() + ":" +
+        //         d.getMinutes() + ":" +
+        //         d.getSeconds();
+        // }
+
+        //Waiting for files
+        // function myDisplayer(some) {
+        //     document.getElementById("demo").innerHTML = some;
+        // }
+
+        // function getFile(myCallback) {
+        //     let req = new XMLHttpRequest();
+        //     req.open('GET', "mycar.html");
+        //     req.onload = function () {
+        //         if (req.status == 200) {
+        //             myCallback(this.responseText);
+        //         } else {
+        //             myCallback("Error: " + req.status);
+        //         }
+        //     }
+        //     req.send();
+        // }
+
+        // getFile(myDisplayer);
+
+        //JS Promises
+        // function myDisplayer(some) {
+        //     document.getElementById("demo").innerHTML = some;
+        // }
+
+        // let myPromise = new Promise(function (myResolve, myReject) {
+        //     let x = 5;
+
+        //     // some code (try to change x to 5)
+
+        //     if (x == 0) {
+        //         myResolve("OK");
+        //     } else {
+        //         myReject("Error");
+        //     }
+        // });
+
+        // myPromise.then(
+        //     function (value) { myDisplayer(value); },
+        //     function (error) { myDisplayer(error); }
+        // );
+
+        //Waiting for a Timeout
+        // const myPromise = new Promise(function (myResolve, myReject) {
+        //     setTimeout(function () {
+        //         myResolve("Helloo");
+        //     }, 3000);
+        // });
+
+        // myPromise.then(function (value) {
+        //     document.getElementById("demo").innerHTML = value;
+        // });
+
+        // function myDisplayer(some) {
+        //     document.getElementById("demo").innerHTML = some;
+        // }
+
+        // let myPromise = new Promise(function (myResolve, myReject) {
+        //     let x = 0;
+
+        //     if (x == 0) {
+        //         myResolve("OK");
+        //     } else {
+        //         myReject("Error");
+        //     }
+        // });
+
+        // myPromise.then(
+        //     function (value) { myDisplayer(value); },
+        //     function (error) { myDisplayer(error); }
+        // );
+
+        //JS Async
+        // function myDisplayer(some) {
+        //     document.getElementById("demo").innerHTML = some;
+        // }
+
+        // async function myFunction() { return "Hello"; }
+
+        // myFunction().then(
+        //     function (value) { myDisplayer(value); },
+        //     function (error) { myDisplayer(error); }
+        // );
+
+        //await
+        // async function myDisplay() {
+        //     let myPromise = new Promise(function (resolve, reject) {
+        //         resolve("Helloo !!");
+        //     });
+        //     document.getElementById("demo").innerHTML = await myPromise;
+        // }
+
+        // myDisplay();
+
 
 
     </script>
