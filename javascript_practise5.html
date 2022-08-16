@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day5 JavaScript</title>
+</head>
+<style>
+    /* #container {
+        width: 400px;
+        height: 400px;
+        position: relative;
+        background: yellow;
+    }
+
+    #animate {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        background: red;
+    } */
+    /* #myDIV {
+        background-color: coral;
+        border: 1px solid;
+        padding: 50px;
+        color: white;
+        font-size: 20px;
+    } */
+</style>
+
+<!-- <body onload="checkCookies()"> -->
+
+<body>
+    <p id="demo">Hello</p>
+
+    <!-- DOM EventListener -->
+    <!-- <button id="myBtn">Try it</button> -->
+    <!-- <div id="myDIV">
+        <p>This div element has an onmousemove event handler that displays a random number every time you move your
+            mouse inside this orange field.</p>
+        <p>Click the button to remove the div's event handler.</p>
+        <button onclick="removeHandler()" id="myBtn">Remove</button>
+    </div> -->
+
+    <!-- DOM Events -->
+    <!-- <button id="myBtn">Try it</button> -->
+    <!-- Enter your name: <input type="text" id="fname" onchange="upperCase()"> -->
+
+    <!--DOM Events -->
+    <!-- <h2 onclick="this.innerHTML='Ooops!'">Click on this text!</h2> -->
+
+    <!-- <button type="button" onclick="document.getElementById('id1').style.color = 'red'">
+        Click Me!</button> -->
+
+    <!-- <div id="container">
+        <div id="animate"></div>
+    </div>
+
+    <p><button onclick="myMove()">Click Me</button></p> -->
+    <!-- <p id="intro">Finding HTML Elements by Id</p>
+    <div id="main">
+        <p>Finding HTML Elements by Tag Name</p>
+        <p>This example demonstrates the <b>getElementsByTagName</b> method.</p>
+    </div> -->
+    <!-- <p class="intro">Hello World!</p>
+    <p class="intro">This example demonstrates the <b>getElementsByClassName</b> method.</p> -->
+
+    <!-- <form id="frm1" action="/action_page.php">
+        First name: <input type="text" name="fname" value="Donald"><br>
+        Last name: <input type="text" name="lname" value="Duck"><br><br>
+        <input type="submit" value="Submit">
+    </form> -->
+
+    <!-- <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+        Name: <input type="text" name="fname">
+        <input type="submit" value="Submit">
+    </form> -->
+
+    <!-- vALIDATING NUMBER INPUT -->
+    <!-- <input id="numb">
+    <button type="button" onclick="myFunction()">Submit</button> -->
+    <script>
+        // const element = document.getElementById("intro");
+
+        // document.getElementById("demo").innerHTML =
+        //     "The text from the intro paragraph is: " + element.innerHTML;
+
+        // const element = document.getElementsByTagName("p");
+
+        // document.getElementById("demo").innerHTML = 'The text in first paragraph (index 0) is: ' + element[0].innerHTML;
+
+        // const x = document.getElementById("main");
+        // const y = x.getElementsByTagName("p");
+
+        // document.getElementById("demo").innerHTML =
+        //     'The first paragraph (index 0) inside "main" is: ' + y[0].innerHTML;
+
+        // const x = document.getElementsByClassName("intro");
+        // document.getElementById("demo").innerHTML =
+        //     'The first paragraph (index 0) with class="intro" is: ' + x[0].innerHTML;
+
+        // const x = document.forms["frm1"];
+        // let text = "";
+        // for (let i = 0; i < x.length; i++) {
+        //     text += x.elements[i].value + "<br>";
+        // }
+        // document.getElementById("demo").innerHTML = text;
+
+        // document.write(Date());
+
+        //JS Forms
+        // function validateForm() {
+        //     let x = document.forms["myForm"]["fname"].value;
+        //     if (x == "") {
+        //         alert("Name can not be null");
+        //         return false;
+        //     }
+        // }
+
+        // function myFunction() {
+        //     let x = document.getElementById("numb").value;
+        //     let text;
+        //     if (isNaN(x) || x < 1 || x > 10) {
+        //         text = "Input not valid";
+        //     }
+        //     else {
+        //         text = "Input OK";
+        //     }
+        //     document.getElementById("demo").innerHTML = text;
+        // }
+
+        //DOM CSS
+        // document.getElementById("p2").style.color = "blue";
+        // document.getElementById("p2").style.fontFamily = "Arial";
+        // document.getElementById("p2").style.fontSize = "larger";
+
+
+        //DOM Animations
+        // function myMove() {
+        //     let id = null;
+        //     const elem = document.getElementById("animate");
+        //     let pos = 0;
+        //     clearInterval(id);
+        //     id = setInterval(frame, 5);
+        //     function frame() {
+        //         if (pos == 350) {
+        //             clearInterval(id);
+        //         } else {
+        //             pos++;
+        //             elem.style.top = pos + "px";
+        //             elem.style.left = pos + "px";
+        //         }
+        //     }
+        // }
+
+        //DOM Events
+        // document.getElementById("myBtn").onclick = displayDate;
+
+        // function displayDate() {
+        //     document.getElementById("demo").innerHTML = Date();
+        // }
+
+        // function checkCookies() {
+        //     var text = "";
+        //     if (navigator.cookieEnabled == true) {
+        //         text = "Cookies are enabled.";
+        //     } else {
+        //         text = "Cookies are not enabled.";
+        //     }
+        //     document.getElementById("demo").innerHTML = text;
+        // }
+
+        //onchange
+        // function upperCase() {
+        //     const x = document.getElementById("fname");
+        //     x.value = x.value.toUpperCase();
+        // }
+
+        //EventListener
+        // document.getElementById("myBtn").addEventListener("click", displayDate);
+        // function displayDate() {
+        //     document.getElementById("demo").innerHTML = Date();
+        // }
+
+        // document.getElementById("myBtn").addEventListener("click", myFunction);
+
+        // function myFunction() {
+        //     alert("Hello World!");
+        // }
+
+        // var x = document.getElementById("myBtn");
+        // x.addEventListener("mouseover", myFunction);
+        // x.addEventListener("click", mySecondFunction);
+        // x.addEventListener("mouseout", myThirdFunction);
+
+        // function myFunction() {
+        //     document.getElementById("demo").innerHTML += "Moused over!<br>";
+        // }
+
+        // function mySecondFunction() {
+        //     document.getElementById("demo").innerHTML += "Clicked!<br>";
+        // }
+
+        // function myThirdFunction() {
+        //     document.getElementById("demo").innerHTML += "Moused out!<br>";
+        // }
+
+        //Window Object
+        // window.addEventListener("resize", function () {
+        //     document.getElementById("demo").innerHTML = Math.random();
+        // });
+
+        //Passing Parameters
+        // let p1 = 5;
+        // let p2 = 7;
+        // document.getElementById("myBtn").addEventListener("click", function () {
+        //     myFunction(p1, p2);
+        // });
+
+        // function myFunction(a, b) {
+        //     document.getElementById("demo").innerHTML = a * b;
+        // }
+
+        // document.getElementById("myDIV").addEventListener("mousemove", myFunction);
+
+        // function myFunction() {
+        //     document.getElementById("demo").innerHTML = Math.random();
+        // }
+
+        // function removeHandler() {
+        //     document.getElementById("myDIV").removeEventListener("mousemove", myFunction);
+        // }
+    </script>
+
+</body>
+
+</html>
