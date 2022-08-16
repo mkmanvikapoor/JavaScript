@@ -33,7 +33,25 @@
 <!-- <body onload="checkCookies()"> -->
 
 <body>
-    <p id="demo">Hello</p>
+    <!-- <p id="demo">Hello</p> -->
+    <!-- <h1 id="id01">My First Page</h1>
+    <p id="id02"></p> -->
+    <!-- <h2>JavaScript HTML DOM</h2>
+    <p>Add a new HTML Element</p>
+    <div id="div1">
+        <p id="p1">This is a paragraph.</p>
+        <p id="p2">This is another paragraph.</p>
+    </div>
+    <button onclick="myFunction()">Remove Element</button> -->
+
+    <!-- <h2>JavaScript HTML DOM</h2>
+
+    <p>Hello World!</p>
+
+    <p>Hello Norway!</p>
+
+    <p id="demo"></p>
+    <button onclick="myFunction()">Try it</button> -->
 
     <!-- DOM EventListener -->
     <!-- <button id="myBtn">Try it</button> -->
@@ -231,6 +249,45 @@
 
         // function removeHandler() {
         //     document.getElementById("myDIV").removeEventListener("mousemove", myFunction);
+        // }
+
+        //DOM Navigation
+        // document.getElementById("id02").innerHTML = document.getElementById("id01").firstChild.nodeValue;
+        // document.getElementById("id02").innerHTML = document.getElementById("id01").childNodes[0].nodeValue;
+        // document.getElementById("demo").innerHTML = document.body.innerHTML;
+        // document.getElementById("demo").innerHTML = document.documentElement.innerHTML;
+        // document.getElementById("id02").innerHTML = document.getElementById("id01").nodeName;
+
+        //DOM Nodes
+        // const para = document.createElement("p");
+        // const node = document.createTextNode("This is new.");
+        // para.appendChild(node);
+        // const element = document.getElementById("div1");
+        // const child = document.getElementById("p1");
+        // element.insertBefore(para, child);
+        // element.appendChild(para);
+
+        // function myFunction() {
+        //     document.getElementById("p1").remove();
+        // }
+
+        // parent.removeChild(child);
+        // parent.replaceChild(para, child);
+
+        // //DOM Collections
+        // const myCollection = document.getElementsByTagName("p");
+
+        // document.getElementById("demo").innerHTML = "The innerHTML of the second paragraph is: " + myCollection[1].innerHTML + " " + myCollection.length;
+
+        //DOM NodeLists
+        // const myNodelist = document.querySelectorAll("p");
+
+        // document.getElementById("demo").innerHTML = "The innerHTML of the second paragraph is: " + myNodelist[1].innerHTML + myNodelist.length;
+        // function myFunction() {
+        //     const myNodelist = document.querySelectorAll("p");
+        //     for (let i = 0; i < myNodelist.length; i++) {
+        //         myNodelist[i].style.color = "red";
+        //     }
         // }
     </script>
 
