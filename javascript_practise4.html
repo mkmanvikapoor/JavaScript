@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day4 JavaScript</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <button type="button" onclick="myFunction()">Count!</button>
+    <script>
+        //Function Definition
+        // var x = myFunction(4, 3);
+        // document.getElementById("demo").innerHTML = x;
+
+        // function myFunction(a, b) {
+        //     return a * b;
+        // }
+
+        // const x = function (a, b) { return a * b };
+        // document.getElementById("demo").innerHTML = x(4, 3);
+
+        //Function Constructor
+        // const myFunction = new Function("a", "b", "return a * b");
+        // document.getElementById("demo").innerHTML = myFunction(4, 3);
+
+        //Self invoking function
+        // (function () {
+        //     document.getElementById("demo").innerHTML = "Hello!";
+        // })();
+
+        //Arguments.length
+        // function myFunction(a, b) {
+        //     return arguments.length;
+        // }
+        // document.getElementById("demo").innerHTML = myFunction(4, 3);
+
+        //Arrow Functions
+        // const x = (x, y) => x * y;
+        // document.getElementById("demo").innerHTML = x(5, 5);
+
+        //Function Parameters
+        //Default Parameters
+        // function myFunction(x, y = 2) {
+        //     if (y === undefined) {
+        //         y = 2;
+        //     }
+        //     return x * y;
+        // }
+        // document.getElementById("demo").innerHTML = myFunction(4);
+
+        //Arguments Objects
+        // function findMax() {
+        //     let max = -Infinity;
+        //     for (let i = 0; i < arguments.length; i++) {
+        //         if (arguments[i] > max) {
+        //             max = arguments[i];
+        //         }
+        //     }
+        //     return max;
+        // }
+        // document.getElementById("demo").innerHTML = findMax(4, 7, 10);
+
+        // function sumAll() {
+        //     let sum = 0;
+        //     for (let i = 0; i < arguments.length; i++) {
+        //         sum += arguments[i];
+        //     }
+        //     return sum;
+        // }
+        // document.getElementById("demo").innerHTML = sumAll(7, 8, 5);
+
+        //Function Invocation
+        //Global Object
+        // let x = myFunction();
+        // function myFunction() {
+        //     return this;
+        // }
+        // document.getElementById("demo").innerHTML = x;
+
+        //Invoking a function as an object method, causes the value of this to be object itself
+        // const myObject = {
+        //     firstName: "John",
+        //     lastName: "Doe",
+        //     fullName: function () {
+        //         return this;
+        //     }
+        // }
+        // document.getElementById("demo").innerHTML = myObject.fullName();
+
+        //Invoking a Function with a Function Constructor
+        // function myFunction(arg1, arg2) {
+        //     this.firstName = arg1;
+        //     this.lastName = arg2;
+        // }
+
+        // const myObj = new myFunction("John", "Doe")
+        // document.getElementById("demo").innerHTML = myObj.firstName;
+
+        //Function Call (Method Reuse)
+        // const person = {
+        //     fullName: function () {
+        //         return this.firstName + " " + this.lastName;
+        //     }
+        // }
+        // const person1 = {
+        //     firstName: "Johny",
+        //     lastName: "Depp"
+        // }
+        // const person2 = {
+        //     firstName: "Richard",
+        //     lastName: "Depp"
+
+        // }
+        // document.getElementsById("demo").innerHTML = person.fullName.call(person1);
+
+        // const person = {
+        //     fullName: function (city, country) {
+        //         return this.firstName + " " + this.lastName + "," + city + "," + country;
+        //     }
+        // }
+        // const person1 = {
+        //     firstName: "Johny",
+        //     lastName: "Depp"
+        // }
+        // const person2 = {
+        //     firstName: "Richard",
+        //     lastName: "Depp"
+        // }
+        // // document.getElementById("demo").innerHTML = person.fullName.call(person2);
+        // document.getElementById("demo").innerHTML = person.fullName.call(person1, "Oslo", "Norway");
+
+        //Apply Method
+        // const person = {
+        //     // fullName: function () {
+        //     fullName: function (city, country) {
+        //         // return this.firstName + " " + this.lastName;
+        //         return this.firstName + " " + this.lastName + "," + city + "," + country;
+        //     }
+        // }
+        // const person1 = {
+        //     firstName: "Johny",
+        //     lastName: "Depp"
+        // }
+        // // document.getElementById("demo").innerHTML = person.fullName.apply(person1);
+        // document.getElementById("demo").innerHTML = person.fullName.apply(person1, ["Oslo", "Norway"]);
+
+        //Math.max on Arrays
+        // document.getElementById("demo").innerHTML = Math.max.apply(null, [1, 2, 3]);
+
+        //Bind Method
+        // const person = {
+        //     firstName: "John",
+        //     lastName: "Doe",
+        //     fullName: function () {
+        //         return this.firstName + " " + this.lastName;
+        //     }
+        // }
+
+        // const member = {
+        //     firstName: "Hege",
+        //     lastName: "Nilsen",
+        // }
+        // let fullName = person.fullName.bind(member);
+        // document.getElementById("demo").innerHTML = fullName();
+
+        //Bond will preserve this
+        // const person = {
+        //     firstName: "John",
+        //     lastName: "Doe",
+        //     display: function () {
+        //         let x = document.getElementById("demo");
+        //         x.innerHTML = this.firstName + " " + this.lastName;
+        //     }
+        // }
+        // let display = person.display.bind(person);
+        // setTimeout(display, 3000);
+
+        //JS Closures
+        // myFunction();
+        // document.getElementById("demo").innerHTML = a * a;
+
+        // function myFunction() {
+        //     a = 4;
+        // }
+
+        //Counter Dilemma
+        // document.getElementById("demo").innerHTML = add();
+        // function add() {
+        //     let counter = 0;
+        //     function plus() { counter += 1; }
+        //     plus();
+        //     plus();
+        //     return counter;
+        // }
+
+        //JS Closures
+        // const add = (function () {
+        //     let counter = 0;
+        //     return function () { counter += 1; return counter; }
+        // })();
+
+        // function myFunction() {
+        //     document.getElementById("demo").innerHTML = add();
+        // }
+
+
+    </script>
+</body>
+
+</html>
