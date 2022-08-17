@@ -33,6 +33,13 @@
 <!-- <body onload="checkCookies()"> -->
 
 <body>
+    <!-- 
+    <div id="demo">
+        <h2>The XMLHttpRequest Object</h2>
+        <button type="button" onclick="loadDoc()">Change Content</button>
+    </div> -->
+    <p>Suggestions: <span id="txtHint"></span></p>
+    <p>First name: <input type="text" id="txt1" onkeyup="showHint(this.value)"></p>
     <!-- <p id="demo">Hello</p> -->
     <!-- <h1 id="id01">My First Page</h1>
     <p id="id02"></p> -->
@@ -289,6 +296,38 @@
         //         myNodelist[i].style.color = "red";
         //     }
         // }
+
+        //AJAX
+        // function loadDoc() {
+        //     const xtthp = new XMLHttpRequest();
+        //     // xtthp.onload = function () {
+        //     xtthp.onreadystatechange = function () {
+        //         if (this.readyState == 4 && this.status == 200)
+        //             // document.getElementById("demo").innerHTML = this.responseText;
+        //             // document.getElementById("demo").innerHTML = this.getAllResponseHeaders();
+        //             document.getElementById("demo").innerHTML = this.getResponseHeader("Last-Modified");
+        //     }
+        //     xtthp.open("GET", "ajax_info.txt");
+        //     // xhttp.open("POST", "demo_post.asp");
+        //     // xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        //     // xhttp.send("fname=Henry&lname=Ford");
+        //     xtthp.send();
+        // }
+
+        //AJAX PHP
+        function showHint(str) {
+            if (str.length == 0) {
+                document.getElementById("txtHint").innerHTML = "";
+                return;
+            }
+            const xhttp = new XMLHttpRequest();
+            xhttp.onload = function () {
+                document.getElementById("txtHint").innerHTML =
+                    this.responseText;
+            }
+            xhttp.open("GET", "gethint.php?q=" + str);
+            xhttp.send();
+        }
     </script>
 
 </body>
